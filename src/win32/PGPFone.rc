@@ -1,0 +1,483 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\PGPFone.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\PGPFone.ico"
+IDR_PGPFONTYPE          ICON    DISCARDABLE     "res\\CPGPFoneDoc.ico"
+IDR_SECURE              ICON    DISCARDABLE     "res\\secure.ico"
+IDR_INSECURE            ICON    DISCARDABLE     "res\\insecure.ico"
+IDR_CONNECTED           ICON    DISCARDABLE     "res\\connecte.ico"
+IDR_WAITING             ICON    DISCARDABLE     "res\\waiting.ico"
+IDI_RECVICON            ICON    DISCARDABLE     "res\\recv.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "A&nswer",                     ID_FILE_ANSWER
+        MENUITEM "Transfer file",               ID_TRANSFER_FILE
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "P&references...\tCtrl+P",     ID_EDIT_PREFERENCES
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "Encoding",                    ID_VIEW_ENCODING_DETAILS
+        , CHECKED
+        MENUITEM "Statistics",                  ID_VIEW_STATUS_INFO, CHECKED
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About PGPFone...",           ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "P",            ID_EDIT_PREFERENCES,    VIRTKEY, CONTROL, NOINVERT
+    VK_F1,          ID_HELP,                VIRTKEY, NOINVERT
+    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PHONE DIALOG DISCARDABLE  0, 0, 241, 139
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Phone"
+FONT 8, "MS Sans Serif"
+BEGIN
+    COMBOBOX        IDC_PREF_DECOMPRESSOR,100,102,105,98,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_ALT_DECOMPRESSOR,100,116,105,99,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "&Listen for calls",IDC_LISTEN_FOR_CALLS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,131,54,58,8
+    CONTROL         "Play &ring sound",IDC_PLAY_RING,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,131,65,63,8
+    CONTROL         "&Modem",IDC_MODEM_CONNECTION,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,38,54,44,8
+    CONTROL         "&Internet",IDC_INTERNET_CONNECTION,"Button",
+                    BS_AUTORADIOBUTTON,38,65,44,8
+    GROUPBOX        "Voice Compression",IDC_STATIC,29,92,183,43
+    RTEXT           "&Preferred Decoder:",IDC_STATIC,38,105,61,8
+    RTEXT           "&Alternate Decoder:",IDC_STATIC,38,120,61,8
+    GROUPBOX        "Incoming Calls",IDC_STATIC,121,44,91,45
+    GROUPBOX        "Connection",IDC_STATIC,29,44,74,34
+    CONTROL         "Request &full duplex",IDC_FULLDUPLEX,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,131,76,74,8
+    GROUPBOX        "Identity",IDC_IDENTITY,29,4,183,35
+    LTEXT           "&Name:",IDC_NAME,37,14,21,8
+    EDITTEXT        IDC_NAMEEDIT,59,12,83,12,ES_AUTOHSCROLL
+    CONTROL         "In&coming",IDC_IDINCOMING,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,155,14,45,8
+    CONTROL         "&Outgoing",IDC_IDOUTGOING,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,155,27,45,8
+    CONTROL         "&Unencrypted",IDC_IDUNENCRYPTED,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,37,27,56,8
+END
+
+IDD_MODEM DIALOG DISCARDABLE  0, 0, 241, 139
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Modem"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "COM1",IDC_COM1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    20,24,35,10
+    CONTROL         "COM2",IDC_COM2,"Button",BS_AUTORADIOBUTTON,20,39,35,10
+    CONTROL         "COM3",IDC_COM3,"Button",BS_AUTORADIOBUTTON,20,54,35,10
+    CONTROL         "COM4",IDC_COM4,"Button",BS_AUTORADIOBUTTON,20,68,35,10
+    CONTROL         "COM5",IDC_COM5,"Button",BS_AUTORADIOBUTTON,65,24,35,10
+    CONTROL         "COM6",IDC_COM6,"Button",BS_AUTORADIOBUTTON,65,39,35,10
+    CONTROL         "COM7",IDC_COM7,"Button",BS_AUTORADIOBUTTON,65,54,35,10
+    CONTROL         "COM8",IDC_COM8,"Button",BS_AUTORADIOBUTTON,65,68,35,10
+    COMBOBOX        IDC_PORT_SPEED,130,64,90,63,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    EDITTEXT        IDC_INIT_STRING,37,108,183,12,ES_AUTOHSCROLL | WS_GROUP
+    GROUPBOX        "Port",IDC_STATIC,10,9,100,80
+    RTEXT           "AT",IDC_STATIC,15,110,20,10
+    GROUPBOX        "Modem Init String",IDC_STATIC,10,94,220,35
+    GROUPBOX        "Port Speed",IDC_STATIC,120,49,110,40
+    COMBOBOX        IDC_BAUD_RATE,130,24,90,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    GROUPBOX        "Max Modem Speed",IDC_STATIC,120,9,110,38
+END
+
+IDD_ENCRYPTION DIALOG DISCARDABLE  0, 0, 241, 139
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Encryption"
+FONT 8, "MS Sans Serif"
+BEGIN
+    COMBOBOX        IDC_PREF_ENCRYPTION,104,16,90,65,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    CONTROL         "768 bits",IDC_768_BITS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,27,97,46,8
+    CONTROL         "1024 bits",IDC_1024_BITS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,27,107,46,8
+    CONTROL         "1536 bits",IDC_1536_BITS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,88,97,46,8
+    CONTROL         "2048 bits",IDC_2048_BITS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,88,107,46,10
+    GROUPBOX        "Encryption",IDC_STATIC,10,6,220,50
+    RTEXT           "Preferred Algorithm:",IDC_STATIC,35,19,65,10
+    GROUPBOX        "Diffie-Hellman Primes",IDC_STATIC,10,65,220,57
+    COMBOBOX        IDC_PREFERRED_PRIME,91,77,90,70,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Preferred Prime:",IDC_STATIC,39,80,52,10
+    CONTROL         "3072 bits",IDC_3072_BITS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,159,97,46,10
+    CONTROL         "4096 bits",IDC_4096_BITS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,159,107,46,10
+    CONTROL         "CAST",IDC_CASTENCRYPTOR,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,62,32,35,10
+    CONTROL         "Blowfish",IDC_BLOWFISHENCRYPTOR,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,62,43,42,10
+    CONTROL         "TripleDES",IDC_3DESENCRYPTOR,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,125,32,48,10
+    CONTROL         "None",IDC_NOENCRYPTOR,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,125,43,33,10
+END
+
+IDD_FILETRANSFER DIALOG DISCARDABLE  0, 0, 241, 139
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "File Transfer"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Default Receive Folder",IDC_STATIC,10,6,220,50
+    PUSHBUTTON      "Browse",IDC_BROWSE,172,38,50,14
+    EDITTEXT        IDC_RECEIVE_FOLDER,17,18,205,14,ES_AUTOHSCROLL
+END
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 327, 203
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_CENTER | WS_POPUP | WS_VISIBLE | 
+    WS_CLIPCHILDREN
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,280,186,44,14
+    PUSHBUTTON      "&Credits",IDC_CREDITS,158,186,44,14
+    PUSHBUTTON      "&www.pgpi.com",IDC_WWWLINK,211,186,57,14
+END
+
+IDD_FTP DIALOGEX 0, 0, 238, 161
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_ACCEPTFILES
+CAPTION "PGPfone - File Transfer Dialog"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Cancel",ID_CANCEL_RECV,156,46,39,13
+    PUSHBUTTON      "Cancel",ID_CANCEL_SEND,41,46,39,13
+    GROUPBOX        "Send",IDC_STATIC,3,0,116,62
+    GROUPBOX        "Receive",IDC_STATIC,119,0,116,62
+    CONTROL         "SendList",IDC_SEND_LIST,"SysListView32",LVS_SMALLICON | 
+                    WS_BORDER | WS_TABSTOP,3,65,114,95,WS_EX_CLIENTEDGE
+    CONTROL         "RecvList",IDC_RECV_LIST,"SysListView32",LVS_SMALLICON | 
+                    LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,121,65,114,95,
+                    WS_EX_CLIENTEDGE
+    CONTROL         "Progress1",IDC_SEND_PROGRESS,"msctls_progress32",
+                    WS_BORDER,19,33,83,9
+    CONTROL         "Progress1",IDC_RECV_PROGRESS,"msctls_progress32",
+                    WS_BORDER,133,33,83,9
+    LTEXT           "",IDC_SEND_FILE,19,9,93,8
+    LTEXT           "",IDC_SEND_SIZE,19,21,93,8
+    LTEXT           "",IDC_RECV_FILE,133,10,93,8
+    LTEXT           "",IDC_RECV_SIZE,133,22,93,8
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,1,0,2
+ PRODUCTVERSION 2,1,0,2
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Network Associates, Inc.\0"
+            VALUE "FileDescription", "PGPfone Secure Telephone\0"
+            VALUE "FileVersion", "2.1b8\0"
+            VALUE "InternalName", "PGPfone\0"
+            VALUE "LegalCopyright", "Copyright (c) 1996-1999 Network Associates, Inc.\0"
+            VALUE "LegalTrademarks", "PGP and PGPfone are trademarks of Network Associates, Inc.\0"
+            VALUE "OriginalFilename", "PGPFONE.EXE\0"
+            VALUE "ProductName", "PGPfone\0"
+            VALUE "ProductVersion", "2.1b8\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_ABOUT8              BITMAP  DISCARDABLE     "res\\about8.bmp"
+IDB_LOGO                BITMAP  DISCARDABLE     "res\\PGPFoneLogo.bmp"
+IDB_LOGO_MASK           BITMAP  DISCARDABLE     "res\\PGPFoneLogoMask.bmp"
+IDB_TRIANGLE            BITMAP  DISCARDABLE     "res\\triangle.bmp"
+IDB_TRIANGLE_MASK       BITMAP  DISCARDABLE     "res\\trianglemask.bmp"
+IDB_MICROPHONE          BITMAP  DISCARDABLE     "res\\micropho.bmp"
+IDB_MICROPHONE_MASK     BITMAP  DISCARDABLE     "res\\microphone_m.bmp"
+IDB_VOLUME              BITMAP  DISCARDABLE     "res\\volume.bmp"
+IDB_VOLUME_MASK         BITMAP  DISCARDABLE     "res\\volume_m.bmp"
+IDB_CREDITS8            BITMAP  DISCARDABLE     "res\\credits8.bmp"
+IDB_ABOUT4              BITMAP  DISCARDABLE     "res\\about4.bmp"
+IDB_ABOUT1              BITMAP  DISCARDABLE     "res\\about1.bmp"
+IDB_CREDITS4            BITMAP  DISCARDABLE     "res\\credits4.bmp"
+IDB_CREDITS1            BITMAP  DISCARDABLE     "res\\credits1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_FTP, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 235
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 158
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDP_SOCKETS_INIT_FAILED "Windows sockets initialization failed."
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "PGPFone\n\nPGPFon\n\n\nPGPFone.Document\nPGPFon Document"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "PGPfone"
+    AFX_IDS_IDLEMESSAGE     "For Help, press F1"
+    AFX_IDS_HELPMODEMESSAGE "Select an object on which to get Help"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+    ID_HELP_INDEX           "Opens Help\nHelp Topics"
+    ID_HELP_FINDER          "List Help topics\nHelp Topics"
+    ID_HELP_USING           "Display instructions about how to use help\nHelp"
+    ID_CONTEXT_HELP         "Display help for clicked on buttons, menus and windows\nHelp"
+    ID_HELP                 "Display help for current task or command\nHelp"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    IDS_STATUS_SECURE       "Secure"
+    IDS_STATUS_UNSECURE     "Unsecure"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    IDS_WEBLINK             "www.pgpi.com"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_ANSWER          "Manually answer an incoming modem call.\nAnswer"
+    ID_EDIT_PREFERENCES     "Show the preferences dialog\nPreferences"
+    ID_VIEW_STATUS_INFO     "View information and stats on the current call.\nStatus Info"
+    ID_VIEW_ENCODING_DETAILS 
+                            "View details about the encoding of the current call.\nEncoding Details"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_BROWSERERROR        "Windows is not able to launch your web browser."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_INFOTEXT            "&Info"
+    IDS_CREDITSTEXT         "&Credits"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\PGPFone.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

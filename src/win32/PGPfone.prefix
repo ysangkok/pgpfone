@@ -1,0 +1,15 @@
+/*____________________________________________________________________________
+	Copyright (C) 1996-1999 Network Associates, Inc.
+	All rights reserved.
+
+	$Id: PGPfone.prefix,v 1.3 1999/03/10 02:50:53 heller Exp $
+____________________________________________________________________________*/
+#include <MFCHeaders.mch>
+
+#define PGP_WIN32					1
+#define PGP_DEBUG					0
+
+#define UNFINISHED_CODE_ALLOWED		1
+
+#include "PGPfoneCommon.h"
+
