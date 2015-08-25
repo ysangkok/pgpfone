@@ -28,7 +28,7 @@
  * Set TARGET_X86 for 80x86 assembler routines.
  */
 #ifdef PGP_WIN32
-#define TARGET_X86
+//#define TARGET_X86
 #endif
 
 #define MIN_WORD        ((-32767)-1)
