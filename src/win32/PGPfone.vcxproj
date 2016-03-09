@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4453FB0A-2395-46A7-B256-3641AE53C535}</ProjectGuid>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.24720.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/PGPfone.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.\;..\common;..\bignum;..\..\..\libs\pfl\win32;..\..\..\libs\pfl\common;..\..\..\libs\pfl\common\util;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;PGP_WIN32=1;PGPXFER=1;PGP_INTEL=1;BNINCLUDE=bni80386c.h;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeaderOutputFile>.\Release/PGPfone.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>ole32.lib;winmm.lib;wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\Release/PGPfone.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ProgramDatabaseFile>.\Release/PGPfone.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release/PGPfone.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/PGPfone.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\;..\common;..\bignum;..\..\..\libs\pfl\win32;..\..\..\libs\pfl\common;..\..\..\libs\pfl\common\util;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;PGP_WIN32=1;PGPXFER=1;PGP_INTEL=1;BNINCLUDE=bni80386c.h;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>.\Debug/PGPfone.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level2</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>ole32.lib;winmm.lib;wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\Debug/PGPfone.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Debug/PGPfone.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug/PGPfone.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Image Include="res\about1.bmp" />
+    <Image Include="res\about4.bmp" />
+    <Image Include="res\about8.bmp" />
+    <Image Include="res\connecte.ico" />
+    <Image Include="res\CPGPFoneDoc.ico" />
+    <Image Include="res\credits1.bmp" />
+    <Image Include="res\credits4.bmp" />
+    <Image Include="res\credits8.bmp" />
+    <Image Include="res\insecure.ico" />
+    <Image Include="res\micropho.bmp" />
+    <Image Include="res\microphone_m.bmp" />
+    <Image Include="res\PGPFone.ico" />
+    <Image Include="res\PGPFoneLogo.bmp" />
+    <Image Include="res\PGPFoneLogoMask.bmp" />
+    <Image Include="res\recv.ico" />
+    <Image Include="res\secure.ico" />
+    <Image Include="res\triangle.bmp" />
+    <Image Include="res\trianglemask.bmp" />
+    <Image Include="res\volume.bmp" />
+    <Image Include="res\volume_m.bmp" />
+    <Image Include="res\waiting.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\bignum\bn.c" />
+    <ClCompile Include="..\bignum\bn32.c" />
+    <ClCompile Include="..\bignum\bni32.c" />
+    <ClCompile Include="..\bignum\bni80386c.c" />
+    <ClCompile Include="..\bignum\bnimem.c" />
+    <ClCompile Include="..\bignum\bninit32.c" />
+    <ClCompile Include="..\bignum\bnlegal.c" />
+    <ClCompile Include="..\common\ADPCM.cpp" />
+    <ClCompile Include="..\common\blowfish.cpp" />
+    <ClCompile Include="..\common\bytefifo.cpp" />
+    <ClCompile Include="..\common\cast5.cpp" />
+    <ClCompile Include="..\common\CCoderRegistry.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\common\CControlThread.cpp" />
+    <ClCompile Include="..\common\CCounterEncryptor.cpp" />
+    <ClCompile Include="..\common\CEncryptionStream.cpp" />
+    <ClCompile Include="..\common\CMessageQueue.cpp" />
+    <ClCompile Include="..\common\CPFPackets.cpp" />
+    <ClCompile Include="..\common\CPFTransport.cpp" />
+    <ClCompile Include="..\common\CPipe.cpp" />
+    <ClCompile Include="..\common\CPriorityQueue.cpp" />
+    <ClCompile Include="..\common\crc.cpp" />
+    <ClCompile Include="..\common\CSoundInput.cpp" />
+    <ClCompile Include="..\common\CSoundOutput.cpp" />
+    <ClCompile Include="..\common\CXferThread.cpp" />
+    <ClCompile Include="..\common\des3.cpp" />
+    <ClCompile Include="..\common\dh.cpp" />
+    <ClCompile Include="..\common\DHPrimes.cpp" />
+    <ClCompile Include="..\common\fastpool.cpp" />
+    <ClCompile Include="..\common\gsm.c" />
+    <ClCompile Include="..\common\HashWordList.cpp" />
+    <ClCompile Include="..\common\PGPFoneUtils.cpp" />
+    <ClCompile Include="..\common\samplerate.cpp" />
+    <ClCompile Include="..\common\SHA.cpp" />
+    <ClCompile Include="CAuthWindow.cpp" />
+    <ClCompile Include="CEncryptionDialog.cpp" />
+    <ClCompile Include="CFileTransferDialog.cpp" />
+    <ClCompile Include="CLevelMeter.cpp" />
+    <ClCompile Include="CModemDialog.cpp" />
+    <ClCompile Include="CPFTInternet.cpp" />
+    <ClCompile Include="CPFTSerial.cpp" />
+    <ClCompile Include="CPFWindow.cpp" />
+    <ClCompile Include="CPGPFone.cpp" />
+    <ClCompile Include="CPGPFoneFrame.cpp" />
+    <ClCompile Include="CPGPFStatusBar.cpp" />
+    <ClCompile Include="CPhoneDialog.cpp" />
+    <ClCompile Include="CSoundLight.cpp" />
+    <ClCompile Include="CStatusPane.cpp" />
+    <ClCompile Include="CTriThreshold.cpp" />
+    <ClCompile Include="CWinFilePipe.cpp" />
+    <ClCompile Include="CXferWindow.cpp" />
+    <ClCompile Include="LMutexSemaphore.cpp" />
+    <ClCompile Include="LSemaphore.cpp" />
+    <ClCompile Include="LThread.cpp" />
+    <ClCompile Include="PGPFWinUtils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="PGPFone.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
