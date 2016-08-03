@@ -2,5 +2,6 @@ build_script:
   - ps: "Invoke-WebRequest https://github.com/ysangkok/pgp-win32-6.5.8/archive/master.zip -OutFile master.zip"
   - ps: "Expand-Archive -LiteralPath master.zip -DestinationPath ."
   - ps: "Move-Item pgp-win32-6.5.8-master\\libs ."
-  - ps: "(new-object net.webclient).DownloadFile('https://ci.appveyor.com/api/buildjobs/ygqch73yb4pq1d1e/artifacts/libs/pgpcdk/win32/PGPcdk/Release/PGPsdkStatic.lib', 'libs\\pgpcdk\\win32\\PGPcdk\\Release\\PGPsdkStatic.lib')"
+  - ps: "New-Item libs\\pgpcdk\\win32\\PGPcdk\\Debug -type directory"
+  - ps: "(new-object net.webclient).DownloadFile('https://ci.appveyor.com/api/buildjobs/ygqch73yb4pq1d1e/artifacts/libs/pgpcdk/win32/PGPcdk/Debug/PGPsdkStatic.lib', 'libs\\pgpcdk\\win32\\PGPcdk\\Debug\\PGPsdkStatic.lib')"
   - cmd: "msbuild src\\win32\\PGPfone.sln /logger:\"C:\\Program Files\\AppVeyor\\BuildAgent\\Appveyor.MSBuildLogger.dll\""
