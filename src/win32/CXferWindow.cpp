@@ -142,11 +142,11 @@ int CXferWindow::OnCreate(LPCREATESTRUCT lpCreateStruct)
 						WS_VISIBLE | WS_CHILD, 
 						cListCtrlRect,
 						this, 
-						(HMENU)IDC_SEND_LIST);
+						(UINT)IDC_SEND_LIST);
 						
 	mSendList.SendMessage(WM_SETFONT, (WPARAM)hFont, FALSE);
 	
-	const cRecvListRect = { rRecvList.left,
+	const RECT cRecvListRect = { rRecvList.left,
 						rRecvList.top,
 						rRecvList.right - rRecvList.left,
 						rRecvList.bottom - rRecvList.top };
@@ -157,7 +157,7 @@ int CXferWindow::OnCreate(LPCREATESTRUCT lpCreateStruct)
 						WS_VISIBLE | WS_CHILD, 
 						cRecvListRect,
 						this, 
-						(HMENU)IDC_RECV_LIST);
+						(UINT)IDC_RECV_LIST);
 						
 	mRecvList.SendMessage(WM_SETFONT, (WPARAM)hFont, FALSE);
 						
