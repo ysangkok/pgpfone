@@ -131,19 +131,18 @@ int CXferWindow::OnCreate(LPCREATESTRUCT lpCreateStruct)
 						
 	mRecvCancel.SendMessage(WM_SETFONT, (WPARAM)hFont, FALSE);
 	
+	const RECT cListCtrlRect = {rSendList.left,
+						rSendList.top,
+						rSendList.right - rSendList.left,
+						rSendList.bottom - rSendList.top };
+	
 	mSendList.CreateEx( WS_EX_CLIENTEDGE,
-						WC_LISTVIEW,
-						"",
 						LVS_SMALLICON | LVS_SINGLESEL | 
 						WS_BORDER | WS_TABSTOP | WS_VISIBLE |
 						WS_VISIBLE | WS_CHILD, 
-						rSendList.left,
-						rSendList.top,
-						rSendList.right - rSendList.left,
-						rSendList.bottom -rSendList.top,
+						cListCtrlRect,
 						GetSafeHwnd(), 
-						(HMENU)IDC_SEND_LIST, 
-						NULL);
+						(HMENU)IDC_SEND_LIST);
 						
 	mSendList.SendMessage(WM_SETFONT, (WPARAM)hFont, FALSE);
 	
