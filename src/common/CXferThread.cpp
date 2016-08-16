@@ -103,14 +103,14 @@ CXferThread::Run(void)
 						}
 						else
 						{
-							if(IsNull(mOverflowSends))
+							if(nullptr == mOverflowSends)
 								mOverflowSends = xsf;
 							else
 							{
 								pgpAssertAddrValid(mOverflowSends, XSendFile);
 								for(walk=mOverflowSends;walk->next;)
 								{
-									if(IsntNull(walk->next))
+									if(nullptr != walk->next)
 									{
 										pgpAssertAddrValid(walk->next, XSendFile);
 									}
@@ -129,7 +129,7 @@ CXferThread::Run(void)
 					else
 						for(xsf=mSending;xsf && xsf!=msg->data;)
 						{
-							if(IsntNull(xsf->next))
+							if(nullptr != xsf->next)
 							{
 								pgpAssertAddrValid(xsf->next, XSendFile);
 							}
@@ -160,12 +160,12 @@ CXferThread::Run(void)
 					mSendMutex->Signal();
 					break;
 				case _mt_abortReceive:
-					if(IsNull(msg->data))
+					if(nullptr == msg->data)
 						xrf = mReceiving;
 					else
-						for(xrf=mReceiving;IsntNull(xrf) && xrf!=msg->data;)
+						for(xrf=mReceiving;nullptr != xrf && xrf!=msg->data;)
 						{
-							if(IsntNull(xrf->next))
+							if(nullptr != xrf->next)
 							{
 								pgpAssertAddrValid(xrf->next, XRcvFile);
 							}
@@ -199,7 +199,7 @@ CXferThread::Run(void)
 					if((ptype == _xst_AckOpenStream) || (ptype == _xst_RemoteAbortStream))
 					{
 						mSendMutex->Wait();
-						if(IsntNull(mSending))
+						if(nullptr != mSending)
 						{
 							pgpAssertAddrValid(mSending, XSendFile);
 						}
@@ -289,7 +289,7 @@ CXferThread::Run(void)
 								}
 								break;
 							}
-							if(IsntNull(xsf->next))
+							if(nullptr != xsf->next)
 							{
 								pgpAssertAddrValid(xsf->next, XSendFile);
 							}

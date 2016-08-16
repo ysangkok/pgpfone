@@ -267,7 +267,7 @@ static void PrintStrRet(LPITEMIDLIST pidl, LPSTRRET lpStr, LPSTR name)
 		{
 			cch = WideCharToMultiByte(	CP_ACP , 
 										0, 
-										lpStr->u.pOleStr, 
+										lpStr->(u.pOleStr), 
 										-1,
 										lpsz, 
 										0, 
@@ -280,7 +280,7 @@ static void PrintStrRet(LPITEMIDLIST pidl, LPSTRRET lpStr, LPSTR name)
 			{
 				WideCharToMultiByte(	CP_ACP , 
 										0, 
-										lpStr->u.pOleStr, 
+										lpStr->(u.pOleStr), 
 										-1,
 										lpsz, 
 										cch, 
