@@ -43,7 +43,7 @@ public:
 protected:
 	//{{AFX_MSG(CPGPFStatusBar)
 	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
-	afx_msg UINT OnNcHitTest(CPoint point);
+	afx_msg LRESULT OnNcHitTest(CPoint point);
 	//}}AFX_MSG
 
 	DECLARE_MESSAGE_MAP()

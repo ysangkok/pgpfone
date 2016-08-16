@@ -45,7 +45,7 @@ protected:
 	//{{AFX_MSG(CPGPFoneFrame)
 	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 	afx_msg void OnClose();
-	afx_msg UINT OnNcHitTest(CPoint point);
+	afx_msg LRESULT OnNcHitTest(CPoint point);
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 };

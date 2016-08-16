@@ -231,7 +231,7 @@ CPGPFoneFrame::OnClose()
 }
 
 
-UINT CPGPFoneFrame::OnNcHitTest(CPoint point) 
+LRESULT CPGPFoneFrame::OnNcHitTest(CPoint point) 
 {
 	UINT area;
 
@@ -251,7 +251,7 @@ UINT CPGPFoneFrame::OnNcHitTest(CPoint point)
 		area = HTBORDER;
 	}
 	
-	return area;
+	return (LRESULT) area;
 }
 
 BEGIN_MESSAGE_MAP(CPGPFoneFrame, CFrameWnd)

@@ -182,7 +182,7 @@ CPGPFStatusBar::OnToolHitTest(CPoint point, TOOLINFO* pTI)
 }
 
 
-UINT CPGPFStatusBar::OnNcHitTest(CPoint point) 
+LRESULT CPGPFStatusBar::OnNcHitTest(CPoint point) 
 {
 	UINT area;
 
@@ -202,5 +202,5 @@ UINT CPGPFStatusBar::OnNcHitTest(CPoint point)
 		area = HTBORDER;
 	}
 	
-	return HTBORDER;
+	return (LRESULT) HTBORDER;
 }
