@@ -1,3 +1,5 @@
+[<image src="https://ci.appveyor.com/api/projects/status/g0rpxpfq4q9g4lnp?svg=true" width="300">](https://ci.appveyor.com/project/ysangkok/pgpfone)
+
 Building
 ===
 
