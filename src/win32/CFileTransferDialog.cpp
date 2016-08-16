@@ -267,7 +267,7 @@ static void PrintStrRet(LPITEMIDLIST pidl, LPSTRRET lpStr, LPSTR name)
 		{
 			cch = WideCharToMultiByte(	CP_ACP , 
 										0, 
-										lpStr.pOleStr, 
+										lpStr->pOleStr, 
 										-1,
 										lpsz, 
 										0, 
@@ -280,7 +280,7 @@ static void PrintStrRet(LPITEMIDLIST pidl, LPSTRRET lpStr, LPSTR name)
 			{
 				WideCharToMultiByte(	CP_ACP , 
 										0, 
-										lpStr.pOleStr, 
+										lpStr->pOleStr, 
 										-1,
 										lpsz, 
 										cch, 
@@ -297,13 +297,13 @@ static void PrintStrRet(LPITEMIDLIST pidl, LPSTRRET lpStr, LPSTR name)
 		
 		case STRRET_OFFSET:
 		{
-			strcpy(name, ((char*)pidl)+lpStr.uOffset);
+			strcpy(name, ((char*)pidl)+lpStr->uOffset);
 			break;
 		}
 		
 		case STRRET_CSTR:
 		{
-			strcpy(name, lpStr.cStr);
+			strcpy(name, lpStr->cStr);
 			break;
 		}	
 	}
