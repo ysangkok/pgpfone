@@ -8,3 +8,7 @@ build_script:
   - ps: "New-Item libs\\pgpcdk\\win32\\PGPcdk\\Debug -type directory"
   - ps: "Invoke-WebRequest https://ci.appveyor.com/api/buildjobs/k9hmupt0aumf8eu7/artifacts/libs/pgpcdk/win32/PGPcdk/Debug/PGPsdkStatic.lib -OutFile libs\\pgpcdk\\win32\\PGPcdk\\Debug\\PGPsdkStatic.lib"
   - cmd: "msbuild src\\win32\\PGPfone.sln /logger:\"C:\\Program Files\\AppVeyor\\BuildAgent\\Appveyor.MSBuildLogger.dll\""
+
+artifacts:
+  - name: PGPfone.exe
+    path: "src\\win32\\Debug\\PGPfone.exe"
