@@ -6,5 +6,5 @@ build_script:
   - ps: "Expand-Archive -LiteralPath master.zip -DestinationPath ."
   - ps: "Move-Item pgp-win32-6.5.8-master\\libs .."
   - ps: "New-Item libs\\pgpcdk\\win32\\PGPcdk\\Debug -type directory"
-  - ps: "Invoke-WebRequest https://ci.appveyor.com/api/buildjobs/fvvymnb3nr7thfgx/artifacts/libs/pgpcdk/win32/PGPcdk/Debug/PGPsdkStatic.lib -OutFile libs\\pgpcdk\\win32\\PGPcdk\\Debug\\PGPsdkStatic.lib"
+  - ps: "Invoke-WebRequest https://ci.appveyor.com/api/buildjobs/k9hmupt0aumf8eu7/artifacts/libs/pgpcdk/win32/PGPcdk/Debug/PGPsdkStatic.lib -OutFile libs\\pgpcdk\\win32\\PGPcdk\\Debug\\PGPsdkStatic.lib"
   - cmd: "msbuild src\\win32\\PGPfone.sln /logger:\"C:\\Program Files\\AppVeyor\\BuildAgent\\Appveyor.MSBuildLogger.dll\""
